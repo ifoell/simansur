@@ -33,6 +33,13 @@
     <link href="{{asset('vendor/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')}}" rel="stylesheet">
+    <!-- bootstrap-datetimepicker -->
+    <link href="{{asset('vendor/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css')}}" rel="stylesheet">
+     <link href="{{asset('vendor/normalize-css/normalize.css')}}" rel="stylesheet">
+     <link href="{{asset('vendor/ion.rangeSlider/css/ion.rangeSlider.css')}}" rel="stylesheet">
+     <link href="{{asset('vendor/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css')}}" rel="stylesheet">
+
+   <link href="{{asset('vendor/cropper/dist/cropper.min.css')}}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
   </head>
@@ -64,7 +71,6 @@
             <h3>Menu</h3>
             <ul class="nav side-menu">
               <li><a href="{{route('dashboard')}}"><i class="fa fa-home"></i> Dashboard </a></li>
-              <li><a href="{{route('tulis_surat')}}"><i class="fa fa-edit"></i> Tulis Surat </a></li>
               <li><a href="{{route('daftar_surat')}}"><i class="fa fa-table"></i> Daftar Surat</a></li>
               <li><a href="{{route('daftar_surat_masuk')}}"><i class="fa fa-table"></i> Daftar Surat Masuk </a></li>
               <li><a href="{{route('daftar_direksi')}}"><i class="fa fa-table"></i> Daftar Karyawan </a></li>
@@ -185,7 +191,15 @@
    <script src="{{asset('vendor/devbridge-autocomplete/dist/jquery.autocomplete.min.js')}}"></script>
    <!-- starrr -->
    <script src="{{asset('vendor/starrr/dist/starrr.js')}}"></script>
+   <!-- bootstrap-datetimepicker -->
+<script src="{{asset('vendor/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js')}}"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{asset('build/js/custom.min.js')}}"></script>
+    <script>
+      $('#tanggal_awal').datetimepicker({
+          format: 'DD/MM/YYYY'
+      });
+    </script>
+    @yield('scripts')
   </body>
 </html>
