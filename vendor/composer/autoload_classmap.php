@@ -11,9 +11,8 @@ return array(
     'CreateJenisTable' => $baseDir . '/database/migrations/2017_08_17_134821_create_jenis_table.php',
     'CreateKaryawansTable' => $baseDir . '/database/migrations/2017_08_24_134519_create_karyawans_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-    'CreatePerusahaanTable' => $baseDir . '/database/migrations/2017_08_17_134805_create_perusahaan_table.php',
     'CreateSuratMasuksTable' => $baseDir . '/database/migrations/2017_08_26_134646_create_surat_masuks_table.php',
-    'CreateSuratTable' => $baseDir . '/database/migrations/2017_08_17_134606_create_surat_table.php',
+    'CreateSuratsTable' => $baseDir . '/database/migrations/2017_08_27_035557_create_surats_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
@@ -594,4 +593,5 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'UsersSeeder' => $baseDir . '/database/seeds/UsersSeeder.php',
 );

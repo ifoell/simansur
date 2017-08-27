@@ -441,9 +441,8 @@ class ComposerStaticInit4221194e77125ca637f6b6c47cd51a46
         'CreateJenisTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_17_134821_create_jenis_table.php',
         'CreateKaryawansTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_24_134519_create_karyawans_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-        'CreatePerusahaanTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_17_134805_create_perusahaan_table.php',
         'CreateSuratMasuksTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_26_134646_create_surat_masuks_table.php',
-        'CreateSuratTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_17_134606_create_surat_table.php',
+        'CreateSuratsTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_27_035557_create_surats_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
@@ -1024,6 +1023,7 @@ class ComposerStaticInit4221194e77125ca637f6b6c47cd51a46
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'UsersSeeder' => __DIR__ . '/../..' . '/database/seeds/UsersSeeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
