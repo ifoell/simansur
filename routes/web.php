@@ -37,4 +37,10 @@ Route::get('/gl/form_surat', ['as' => 'form_surat', 'uses' => 'Admin_GL@form_sur
 
 Route::get('/gl/form_client', ['as' => 'form_client', 'uses' => 'Admin_GL@form_client']);
 
-Route::post('/gl/daftar_client', 'Admin_GL@save_client');
+Route::post('/gl/form_client', 'Admin_GL@save_client');
+
+Route::get('/gl/{client}/edit_client', 'Admin_GL@edit_client')->name('admin.edit_client');
+
+Route::post('/gl/{client}/edit_client', 'Admin_GL@update_client');
+
+Route::post('/gl/{client}/delete_client', 'Admin_GL@delete_client')->name('admin.delete_client');

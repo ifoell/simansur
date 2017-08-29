@@ -12,45 +12,43 @@
                    </div>
                    <div class="x_content">
                      <br/>
-                      @include('partials.flash')
-                     <form action="/gl/form_client" method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                     <form action="{{route('admin.edit_client', $client->id)}}" method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                        {{ csrf_field() }}
                        <div class="form-group">
                          <label for="nama" class="control-label col-md-3 col-sm-3 col-xs-12">Nama Client <span class="required">*</span></label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input id="nama" class="form-control col-md-7 col-xs-12" required="required" type="text" name="nama">
+                           <input id="nama" class="form-control col-md-7 col-xs-12" required="required" type="text" name="nama" value="{{$client->nama}}">
                          </div>
                        </div>
                        <div class="form-group">
                          <label for="instansi" class="control-label col-md-3 col-sm-3 col-xs-12">Instansi <span class="required">*</span></label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input id="instansi" class="form-control col-md-7 col-xs-12" type="text" name="instansi" required="required">
+                           <input id="instansi" class="form-control col-md-7 col-xs-12" type="text" name="instansi" required="required" value="{{$client->instansi}}">
                          </div>
                        </div>
                        <div class="form-group">
                          <label for="alamat" class="control-label col-md-3 col-sm-3 col-xs-12">Alamat <span class="required">*</span></label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input id="alamat" class="form-control col-md-7 col-xs-12" type="text" name="alamat" required="required">
+                           <input id="alamat" class="form-control col-md-7 col-xs-12" type="text" name="alamat" required="required" value="{{$client->alamat}}">
                          </div>
                        </div>
                        <div class="form-group">
                          <label for="no_telp" class="control-label col-md-3 col-sm-3 col-xs-12">Nomor Telepon</label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input id="no_telp" class="form-control col-md-7 col-xs-12" type="number" name="no_telp">
+                           <input id="no_telp" class="form-control col-md-7 col-xs-12" type="number" name="no_telp" value="{{$client->no_telp}}">
                          </div>
                        </div>
                        <div class="form-group">
                          <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Email</label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input id="email" class="form-control col-md-7 col-xs-12" type="email" name="email">
+                           <input id="email" class="form-control col-md-7 col-xs-12" type="email" name="email" value="{{$client->email}}">
                          </div>
                        </div>
 
                        <div class="ln_solid"></div>
                        <div class="form-group">
                          <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
- 						               <button class="btn btn-primary" type="reset">Reset</button>
-                           <button type="submit" class="btn btn-success">Simpan</button>
+                           <button type="submit" class="btn btn-success">Perbaharui</button>
                          </div>
                        </div>
                      </form>

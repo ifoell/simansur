@@ -32,73 +32,27 @@
                           <th>Alamat</th>
                           <th>No. Telp</th>
                           <th>Email</th>
+                          <th>Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>Ilham</td>
-                          <td>Gunadarma</td>
-                          <td>Jasinga</td>
-                          <td>085716887907</td>
-                          <td>ilham.aespi@gmail.com</td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>Ilham</td>
-                          <td>Gunadarma</td>
-                          <td>Jasinga</td>
-                          <td>085716887907</td>
-                          <td>ilham.aespi@gmail.com</td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>Ilham</td>
-                          <td>Gunadarma</td>
-                          <td>Jasinga</td>
-                          <td>085716887907</td>
-                          <td>ilham.aespi@gmail.com</td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>Ilham</td>
-                          <td>Gunadarma</td>
-                          <td>Jasinga</td>
-                          <td>085716887907</td>
-                          <td>ilham.aespi@gmail.com</td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>Ilham</td>
-                          <td>Gunadarma</td>
-                          <td>Jasinga</td>
-                          <td>085716887907</td>
-                          <td>ilham.aespi@gmail.com</td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>Ilham</td>
-                          <td>Gunadarma</td>
-                          <td>Jasinga</td>
-                          <td>085716887907</td>
-                          <td>ilham.aespi@gmail.com</td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>Ilham</td>
-                          <td>Gunadarma</td>
-                          <td>Jasinga</td>
-                          <td>085716887907</td>
-                          <td>ilham.aespi@gmail.com</td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>Ilham</td>
-                          <td>Gunadarma</td>
-                          <td>Jasinga</td>
-                          <td>085716887907</td>
-                          <td>ilham.aespi@gmail.com</td>
-                        </tr>
+                        @foreach ($clients as $client)
+                          <tr>
+                            <td>{{1}}</td>
+                            <td>{{$client->nama}}</td>
+                            <td>{{$client->instansi}}</td>
+                            <td>{{$client->alamat}}</td>
+                            <td>{{$client->no_telp}}</td>
+                            <td>{{$client->email}}</td>
+                            <td>
+                                <form action="{{route('admin.delete_client', $client->id)}}" method="post">
+                                  {{ csrf_field() }}
+                                  <a href="{{route('admin.edit_client', $client->id)}}" class="btn btn-success btn-xs">edit</a>
+                                  <input type="submit" value="hapus" class="btn btn-danger btn-xs" onclick="return confirm('Apakah anda Yakin Data ini Dihapus?')">
+                                </form>
+                              </td>
+                          </tr>
+                        @endforeach
 
                       </tbody>
                     </table>

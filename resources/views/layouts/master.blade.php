@@ -110,8 +110,8 @@
           </ul>
         </nav>
       </div>
+      @include('partials.flash')
     </div>
-
     @yield('content')
 
     <!-- footer content -->
