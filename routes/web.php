@@ -44,3 +44,5 @@ Route::get('/gl/{client}/edit_client', 'Admin_GL@edit_client')->name('admin.edit
 Route::post('/gl/{client}/edit_client', 'Admin_GL@update_client');
 
 Route::post('/gl/{client}/delete_client', 'Admin_GL@delete_client')->name('admin.delete_client');
+
+Route::post('/gl/form_surat', 'Admin_GL@save_surat');

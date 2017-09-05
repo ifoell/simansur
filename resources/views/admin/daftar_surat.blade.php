@@ -3,8 +3,6 @@
 
 @section('content')
         <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
             <div class="page-title">
               <div class="title_left">
                 <h3>Daftar Surat</h3>
@@ -18,13 +16,14 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Responsive example<small>Users</small></h2>
+                    <h2>Data Surat</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">Tambah data baru</button>
+                  <a href="/gl/form_surat" type="button" class="btn btn-primary btn-md">Tambah data</a>
+{{--                     <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">Tambah data baru</button> --}}
                     <!-- Modal -->
-                    <div class="modal fade" id="myModal" role="dialog">
+{{--                     <div class="modal fade" id="myModal" role="dialog">
                       <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -47,7 +46,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> --}}
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                       <thead>
                         <tr>
@@ -180,7 +179,5 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
         <!-- /page content -->
 @endsection

@@ -9,6 +9,7 @@
         "anhskohbo/no-captcha": "^2.3",
         "barryvdh/laravel-dompdf": "^0.8.0",
         "bogardo/mailgun": "^5.0",
+        "doctrine/dbal": "^2.5",
         "laravel/framework": "5.3.*",
         "laravelcollective/html": "^5.3.0",
         "maatwebsite/excel": "~2.1.0",

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Client;
+use App\Surat;
+use App\Jenis;
 use App\Http\Requests\ClientRequest;
 
 class Admin_GL extends Controller

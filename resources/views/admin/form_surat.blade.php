@@ -1,9 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-  <div class="right_col" role="main">
-     <div class="">
-  <div class="row">
+            <div class="row">
                <div class="col-md-12 col-sm-12 col-xs-12">
                  <div class="x_panel">
                    <div class="x_title">
@@ -13,11 +11,20 @@
                    <div class="x_content">
                      <br/>
                      <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                      <div class="form-group">
+                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="jenis_surat">Jenis Surat<span class="required">*</span>
+                         </label>
+                         <div class="col-md-6 col-sm-6 col-xs-12">
+                           <select class="form-control" id="jenis_surat" name="jenis_surat">
+                             <option>Surat Keterangan</option>
+                           </select>
+                        </div>
+                       </div>
                        <div class="form-group">
                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="lingkup-surat">Lingkup Surat<span class="required">*</span>
                          </label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
-                           <select class="form-control" id="lingkup_surat" name="nama_perusahaan">
+                           <select class="form-control" id="lingkup_surat" name="lingkup_surat">
                              <option>Internal</option>
                              <option>External</option>
                            </select>
@@ -58,7 +65,7 @@
                          </div>
                        </div>
                           <div class="form-group">
-                            <label for="tanggal_awal" class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal Awal</label>
+                            <label for="tanggal_awal" class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                               <div class="input-group date" id="tanggal_awal">
                                   <input type="text" class="form-control">
@@ -69,6 +76,14 @@
                             </div>
                           </div>
 
+                        <div class="form-group">
+                         <label for="isi_surat" class="control-label col-md-3 col-sm-3 col-xs-12">Isi Surat</label>
+                         <div class="col-md-6 col-sm-6 col-xs-12">
+                           <textarea class="resizable_textarea form-control" name="isi_surat" id="isi_surat" placeholder="Masukan Isi surat" style="margin: 0px -28px 0px 0px; height: 66px; width: 498px;"></textarea>
+                         </div>
+                       </div>
+                          <div
+{{-- 
                           <div class="form-group">
                             <label for="tanggal_awal" class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal Akhir</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -79,7 +94,7 @@
                                   </span>
                               </div>
                             </div>
-                          </div>
+                          </div> --}}
 
                        <div class="ln_solid"></div>
                        <div class="form-group">
@@ -94,6 +109,4 @@
                  </div>
                </div>
              </div>
-           </div>
-         </div>
 @endsection

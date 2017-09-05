@@ -18,15 +18,13 @@
     {{-- skin green --}}
     <link href="{{asset('vendor/iCheck/skins/flat/green.css')}}" rel="stylesheet">
     <!-- bootstrap-wysiwyg -->
-    <link href="../vendor/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <link href="/vendor/google-code-prettify/bin/prettify.min.css" rel="stylesheet"> 
     <!-- Select2 -->
-   <link href="../vendor/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="/vendor/select2/dist/css/select2.min.css" rel="stylesheet"> 
    <!-- Switchery -->
-   <link href="../vendor/switchery/dist/switchery.min.css" rel="stylesheet">
+    <link href="/vendor/switchery/dist/switchery.min.css" rel="stylesheet"> 
    <!-- starrr -->
-   <link href="../vendor/starrr/dist/starrr.css" rel="stylesheet">
-   <!-- bootstrap-daterangepicker -->
-   <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="/vendor/starrr/dist/starrr.css" rel="stylesheet"> 
     <!-- Datatables -->
     <link href="{{asset('vendor/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')}}" rel="stylesheet">
@@ -39,7 +37,7 @@
      <link href="{{asset('vendor/ion.rangeSlider/css/ion.rangeSlider.css')}}" rel="stylesheet">
      <link href="{{asset('vendor/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css')}}" rel="stylesheet">
 
-   <link href="{{asset('vendor/cropper/dist/cropper.min.css')}}" rel="stylesheet">
+{{--    <link href="{{asset('vendor/cropper/dist/cropper.min.css')}}" rel="stylesheet"> --}}
     <!-- Custom Theme Style -->
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
   </head>
@@ -110,9 +108,13 @@
           </ul>
         </nav>
       </div>
-      @include('partials.flash')
     </div>
-    @yield('content')
+    <div class="right_col" role="main">
+      <div class="">
+          @include('partials.flash')
+          @yield('content')
+      </div>
+    </div>
 
     <!-- footer content -->
     <footer>
@@ -133,7 +135,7 @@
     <!-- NProgress -->
     <script src="{{asset('vendor/nprogress/nprogress.js')}}"></script>
     <!-- bootstrap-progressbar -->
-   <script src="../vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- Datatables -->
    <script src="{{asset('vendor/datatables.net/js/jquery.dataTables.min.js')}}"></script>
    <script src="{{asset('vendor/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
@@ -158,17 +160,15 @@
     <!-- jQuery Sparklines -->
     <script src="{{asset('vendor/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>
     <!-- Flot -->
-    <script src="{{asset('vendor/Flot/jquery.flot.js')}}"></script>
+{{--     <script src="{{asset('vendor/Flot/jquery.flot.js')}}"></script>
     <script src="{{asset('vendor/Flot/jquery.flot.pie.js')}}"></script>
     <script src="{{asset('vendor/Flot/jquery.flot.time.js')}}"></script>
     <script src="{{asset('vendor/Flot/jquery.flot.stack.js')}}"></script>
-    <script src="{{asset('vendor/Flot/jquery.flot.resize.js')}}"></script>
+    <script src="{{asset('vendor/Flot/jquery.flot.resize.js')}}"></script> --}}
     <!-- Flot plugins -->
-    <script src="{{asset('vendor/flot.orderbars/js/jquery.flot.orderBars.js')}}"></script>
+{{--     <script src="{{asset('vendor/flot.orderbars/js/jquery.flot.orderBars.js')}}"></script>
     <script src="{{asset('vendor/flot-spline/js/jquery.flot.spline.min.js')}}"></script>
-    <script src="{{asset('vendor/flot.curvedlines/curvedLines.js')}}"></script>
-    <!-- DateJS -->
-    <script src="{{asset('vendor/DateJS/build/date.js')}}"></script>
+    <script src="{{asset('vendor/flot.curvedlines/curvedLines.js')}}"></script> --}}
     <!-- bootstrap-daterangepicker -->
     <script src="{{asset('vendor/moment/min/moment.min.js')}}"></script>
     <script src="{{asset('vendor/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
