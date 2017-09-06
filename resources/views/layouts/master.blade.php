@@ -33,6 +33,13 @@
     <link href="{{asset('vendor/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')}}" rel="stylesheet">
+    <!-- bootstrap-datetimepicker -->
+    <link href="{{asset('vendor/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css')}}" rel="stylesheet">
+     <link href="{{asset('vendor/normalize-css/normalize.css')}}" rel="stylesheet">
+     <link href="{{asset('vendor/ion.rangeSlider/css/ion.rangeSlider.css')}}" rel="stylesheet">
+     <link href="{{asset('vendor/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css')}}" rel="stylesheet">
+
+   <link href="{{asset('vendor/cropper/dist/cropper.min.css')}}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
   </head>
@@ -123,8 +130,8 @@
           </ul>
         </nav>
       </div>
+      @include('partials.flash')
     </div>
-
     @yield('content')
 
     <!-- footer content -->
@@ -204,8 +211,11 @@
    <script src="{{asset('vendor/devbridge-autocomplete/dist/jquery.autocomplete.min.js')}}"></script>
    <!-- starrr -->
    <script src="{{asset('vendor/starrr/dist/starrr.js')}}"></script>
+   <!-- bootstrap-datetimepicker -->
+<script src="{{asset('vendor/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js')}}"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{asset('build/js/custom.min.js')}}"></script>
+<<<<<<< HEAD
 
     <script>
       $(document).ready(function() {
@@ -215,6 +225,11 @@
         }, function(start, end, label) {
           console.log(start.toISOString(), end.toISOString(), label);
         });
+=======
+    <script>
+      $('#tanggal_awal').datetimepicker({
+          format: 'DD/MM/YYYY'
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
       });
     </script>
     @yield('scripts')

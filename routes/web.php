@@ -19,7 +19,11 @@ Auth::routes();
 
 //Route::get('/home', 'HomeController@index');
 
+<<<<<<< HEAD
 Route::get('/', ['as' => 'dashboard', 'uses' => 'Admin_GL@index']);
+=======
+Route::get('/gl', ['as' => 'dashboard', 'uses' => 'Admin_GL@index']);
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
 
 Route::get('/gl/daftar_surat', ['as' => 'daftar_surat', 'uses' => 'Admin_GL@daftar_surat']);
 
@@ -50,6 +54,17 @@ Route::get('/gl/daftar_surat_masuk', ['as' => 'daftar_surat_masuk', 'uses' => 'A
 
 Route::get('/gl/daftar_client', ['as' => 'daftar_client', 'uses' => 'Admin_GL@daftar_client']);
 
+<<<<<<< HEAD
+=======
+Route::get('/gl/daftar_surat_masuk', ['as' => 'daftar_surat_masuk', 'uses' => 'Admin_GL@daftar_surat_masuk']);
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::resource('karyawan', 'KaryawanController');
+});
+
+Route::get('/gl/form_surat', ['as' => 'form_surat', 'uses' => 'Admin_GL@form_surat']);
+
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
 Route::get('/gl/form_client', ['as' => 'form_client', 'uses' => 'Admin_GL@form_client']);
 
 Route::post('/gl/form_client', 'Admin_GL@save_client');
@@ -58,4 +73,8 @@ Route::get('/gl/{client}/edit_client', 'Admin_GL@edit_client')->name('admin.edit
 
 Route::post('/gl/{client}/edit_client', 'Admin_GL@update_client');
 
+<<<<<<< HEAD
 Route::post('/gl/{client}/delete_client', 'Admin_GL@delete_client')->name('admin.delete_client');
+=======
+Route::post('/gl/{client}/delete_client', 'Admin_GL@delete_client')->name('admin.delete_client');
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600

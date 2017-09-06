@@ -7,7 +7,11 @@
                <div class="col-md-12 col-sm-12 col-xs-12">
                  <div class="x_panel">
                    <div class="x_title">
+<<<<<<< HEAD
                      <h2>Tambah Client</h2>
+=======
+                     <h2>Tulis Surat</h2>
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
                      <div class="clearfix"></div>
                    </div>
                    <div class="x_content">

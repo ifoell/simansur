@@ -12,7 +12,11 @@ class KaryawanTableSeeder extends Seeder
     public function run()
     {
         //
+<<<<<<< HEAD
         DB::table('karyawan')->insert([
+=======
+        DB::table('karyawans')->insert([
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
         	'nama' => 'Noviandri',
         	'nip' => '-',
         	'jabatan' => 'Chief Executive Officer',

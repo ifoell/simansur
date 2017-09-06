@@ -34,12 +34,15 @@
                          </div>
                        </div>
                        <div class="form-group">
+<<<<<<< HEAD
                          <label for="nomor_surat" class="control-label col-md-3 col-sm-3 col-xs-12">No. Surat</label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
                            <input id="nomor_surat" class="form-control col-md-7 col-xs-12" type="text" name="nomor_surat" readonly="">
                          </div>
                        </div>
                        <div class="form-group">
+=======
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
                          <label for="perihal" class="control-label col-md-3 col-sm-3 col-xs-12">Perihal</label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
                            <input id="perihal" class="form-control col-md-7 col-xs-12" type="text" name="perihal">
@@ -54,6 +57,7 @@
                        <div class="form-group">
                          <label for="client" class="control-label col-md-3 col-sm-3 col-xs-12">Client</label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
+<<<<<<< HEAD
                            <select id="client" class="select2_single form-control" tabindex="-1">
                             <option value="">Select a client...</option>
                             <option value="4">Thomas Edison</option>
@@ -61,6 +65,9 @@
                             <option value="3">Nikola Tesla</option>
                             <option value="5">Arnold Schwarzenegger</option>
                           </select>
+=======
+                           <input id="client" class="form-control col-md-7 col-xs-12" type="text" name="client">
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
                          </div>
                        </div>
                        <div class="form-group">
@@ -73,8 +80,13 @@
                             <label for="tanggal_awal" class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal Awal</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                               <div class="input-group date" id="tanggal_awal">
+<<<<<<< HEAD
                                   <input type="text" class="form-control has-feedback-right" id="single_cal3" aria-describedby="inputSuccess2Status3">
                                 <span class="input-group-addon">
+=======
+                                  <input type="text" class="form-control">
+                                  <span class="input-group-addon">
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
                                      <span class="glyphicon glyphicon-calendar"></span>
                                   </span>
                               </div>
@@ -109,6 +121,7 @@
            </div>
          </div>
 @endsection
+<<<<<<< HEAD
 
 @section('scripts')
 
@@ -121,3 +134,5 @@
       });
       </script>
 @endsection
+=======
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600

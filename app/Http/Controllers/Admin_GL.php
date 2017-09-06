@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Client;
 use App\Http\Requests\ClientRequest;
+<<<<<<< HEAD
 use App\Karyawan;
 use App\Http\Requests\KaryawanRequest;
 use Laratrust\LaratrustFacade as Laratrust;
 use Illuminate\Support\Facades\Auth;
+=======
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
 
 class Admin_GL extends Controller
 {
@@ -31,6 +34,7 @@ class Admin_GL extends Controller
       return view('admin.form_surat');
     }
 
+<<<<<<< HEAD
     public function save_surat(SuratRequest $request){
       Surat::create([
         'nomor_surat' => $request->nomor_surat,
@@ -80,15 +84,25 @@ class Admin_GL extends Controller
       $request->karyawan->delete();
       $request->session()->flash('message', 'Data Karyawan telah berhasil Dihapus');
       return redirect()->to('/gl/daftar_karyawan');
+=======
+    public function daftar_client(){
+            $clients = Client::All();
+      return view('admin.daftar_client', compact('clients'));
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
     }
 
     public function daftar_surat_masuk(){
       return view('admin.daftar_surat_masuk');
     }
 
+<<<<<<< HEAD
     public function daftar_client(){
       $clients = Client::All();
       return view('admin.daftar_client', compact('clients'));
+=======
+    public function form_surat(){
+      return view('admin.form_surat');
+>>>>>>> 4d6a1397083ed9f1f2fe91b7935d87c27006d600
     }
 
     public function form_client(){
