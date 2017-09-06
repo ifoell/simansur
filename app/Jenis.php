@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class surat_masuk extends Model
+class Jenis extends Model
 {
     //
+    protected $table = 'jenis';
 }

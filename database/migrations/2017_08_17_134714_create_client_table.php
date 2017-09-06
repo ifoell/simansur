@@ -18,6 +18,8 @@ class CreateClientTable extends Migration
             $table->string('nama');
             $table->string('instansi');
             $table->string('alamat');
+            $table->string('no_telp');
+            $table->string('email');
             $table->timestamps();
         });
     }

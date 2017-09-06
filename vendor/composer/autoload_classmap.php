@@ -92,6 +92,7 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'JenisTableSeeder' => $baseDir . '/database/seeds/JenisTableSeeder.php',
+    'KaryawanTableSeeder' => $baseDir . '/database/seeds/KaryawanTableSeeder.php',
     'LaratrustSetupTables' => $baseDir . '/database/migrations/2017_08_17_135043_laratrust_setup_tables.php',
     'Laratrust\\AddLaratrustUserTraitUseCommand' => $vendorDir . '/santigarcor/laratrust/src/commands/AddLaratrustUserTraitUseCommand.php',
     'Laratrust\\MakePermissionCommand' => $vendorDir . '/santigarcor/laratrust/src/commands/MakePermissionCommand.php',

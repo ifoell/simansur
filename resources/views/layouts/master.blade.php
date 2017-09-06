@@ -53,7 +53,7 @@
           </div>
           <div class="profile_info">
             <span>Welcome,</span>
-            <h2>Admin</h2>
+            <h2>{{ Auth::user()->name }}</h2>
           </div>
         </div>
         <!-- /menu profile quick info -->
@@ -64,10 +64,9 @@
             <h3>Menu</h3>
             <ul class="nav side-menu">
               <li><a href="{{route('dashboard')}}"><i class="fa fa-home"></i> Dashboard </a></li>
-              <li><a href="{{route('tulis_surat')}}"><i class="fa fa-edit"></i> Tulis Surat </a></li>
               <li><a href="{{route('daftar_surat')}}"><i class="fa fa-table"></i> Daftar Surat</a></li>
               <li><a href="{{route('daftar_surat_masuk')}}"><i class="fa fa-table"></i> Daftar Surat Masuk </a></li>
-              <li><a href="{{route('daftar_direksi')}}"><i class="fa fa-table"></i> Daftar Karyawan </a></li>
+              <li><a href="{{route('daftar_karyawan')}}"><i class="fa fa-table"></i> Daftar Karyawan </a></li>
               <li><a href="{{route('daftar_client')}}"><i class="fa fa-table"></i> Daftar Client </a></li>
             </ul>
           </div>
@@ -75,7 +74,17 @@
             <h3>Akun</h3>
             <ul class="nav side-menu">
               <li><a><i class="fa fa-user"></i> Pengaturan akun </a></li>
-              <li><a><i class="fa fa-user"></i> Logout </a></li>
+              <li>
+                <a href="{{ url('/logout') }}"
+                  onclick="event.preventDefault();
+                  document.getElementById('logout-form').submit();">
+                  Logout
+                </a>
+
+                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                  {{ csrf_field() }}
+                </form>
+              </li>
             </ul>
           </div>
         </div>
@@ -92,12 +101,22 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="">
               <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                <img src="images/img.jpg" alt="">Admin
+                <img src="images/img.jpg" alt="">{{ Auth::user()->name }}
                 <span class=" fa fa-angle-down"></span>
               </a>
               <ul class="dropdown-menu dropdown-usermenu pull-right">
                 <li><a href="javascript:;"> Profile</a></li>
-                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                <li>
+                  <a href="{{ url('/logout') }}"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                      Logout
+                  </a>
+
+                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                  </form>
+                </li>
               </ul>
             </li>
             <!--hapus notif pesan-->
@@ -187,5 +206,17 @@
    <script src="{{asset('vendor/starrr/dist/starrr.js')}}"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{asset('build/js/custom.min.js')}}"></script>
+
+    <script>
+      $(document).ready(function() {
+        $('#single_cal3').daterangepicker({
+          singleDatePicker: true,
+          calender_style: "picker_3"
+        }, function(start, end, label) {
+          console.log(start.toISOString(), end.toISOString(), label);
+        });
+      });
+    </script>
+    @yield('scripts')
   </body>
 </html>

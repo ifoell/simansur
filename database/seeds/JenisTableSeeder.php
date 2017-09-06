@@ -15,7 +15,7 @@ class JenisTableSeeder extends Seeder
         //
     	DB::table('jenis')->insert([
             'kode' => 'SK',
-            'keterangan' => 'Bahwa yang bersangkutan telah melaksanakan wawancara untuk magang di CV. Rajonet Indonesia. Untuk itu saudara diharuskan untuk melakukan training selama 1 bulan untuk melihat kemampuan saudara. <br/>Demikian surat ini diinformasikan, kami ucapkan terima kasih.',
+            'ket' => 'Bahwa yang bersangkutan telah melaksanakan wawancara untuk magang di CV. Rajonet Indonesia. Untuk itu saudara diharuskan untuk melakukan training selama 1 bulan untuk melihat kemampuan saudara. <br/>Demikian surat ini diinformasikan, kami ucapkan terima kasih.',
         ]);
     }
 }

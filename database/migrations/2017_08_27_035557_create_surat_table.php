@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSuratsTable extends Migration
+class CreateSuratTable extends Migration
 {
     /**
      * Run the migrations.
@@ -18,6 +18,9 @@ class CreateSuratsTable extends Migration
             $table->string('nomor_surat')->unique();
             $table->integer('id_jenis')->unsigned();
             $table->integer('id_client')->unsigned();
+            $table->string('perihal');
+            $table->string('lampiran');
+            $table->date('tanggal');
             $table->timestamps();
 
             $table->foreign('id_jenis')->references('id')->on('jenis');
@@ -32,6 +35,6 @@ class CreateSuratsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('surats');
+        Schema::dropIfExists('surat');
     }
 }

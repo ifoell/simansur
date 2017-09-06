@@ -522,6 +522,7 @@ class ComposerStaticInit4221194e77125ca637f6b6c47cd51a46
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'JenisTableSeeder' => __DIR__ . '/../..' . '/database/seeds/JenisTableSeeder.php',
+        'KaryawanTableSeeder' => __DIR__ . '/../..' . '/database/seeds/KaryawanTableSeeder.php',
         'LaratrustSetupTables' => __DIR__ . '/../..' . '/database/migrations/2017_08_17_135043_laratrust_setup_tables.php',
         'Laratrust\\AddLaratrustUserTraitUseCommand' => __DIR__ . '/..' . '/santigarcor/laratrust/src/commands/AddLaratrustUserTraitUseCommand.php',
         'Laratrust\\MakePermissionCommand' => __DIR__ . '/..' . '/santigarcor/laratrust/src/commands/MakePermissionCommand.php',

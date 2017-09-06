@@ -22,10 +22,32 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p class="text-muted font-13 m-b-30">
-                      Responsive is an extension for DataTables that resolves that problem by optimising the table's layout for different screen sizes through the dynamic insertion and removal of columns from the table.
-                    </p>
-
+                    <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">Tambah data baru</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Pilih Jenis Surat</h4>
+                          </div>
+                          <div class="modal-body">
+                            <select class="form-control">
+                              <option>Choose option</option>
+                              <option>Surat Keterangan</option>
+                              <option>Surat Penawaran</option>
+                              <option>Surat Perintah Kerja</option>
+                              <option>Surat Konfirmasi Pesanan</option>
+                            </select>
+                          </div>
+                          <div class="modal-footer">
+                            <a type="button" class="btn btn-primary" href="/gl/form_surat">Oke</a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                       <thead>
                         <tr>

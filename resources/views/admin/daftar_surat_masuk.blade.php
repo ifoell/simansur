@@ -29,7 +29,7 @@
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                       <thead>
                         <tr>
-                          <th>First name</th>
+                          <th>No</th>
                           <th>Last name</th>
                           <th>Position</th>
                           <th>Office</th>
