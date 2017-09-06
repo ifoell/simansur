@@ -45,4 +45,10 @@ Route::post('/gl/{client}/edit_client', 'Admin_GL@update_client');
 
 Route::post('/gl/{client}/delete_client', 'Admin_GL@delete_client')->name('admin.delete_client');
 
-Route::post('/gl/form_surat', 'Admin_GL@save_surat');
+// belum dipake
+Route::post('/gl/form_surat', 'Admin_GL@save_surat'); 
+
+
+Route::get('/gl/form_surat_masuk', 'SuratMasukController@form_surat_masuk');
+
+Route::post('/gl/form_surat_masuk', 'SuratMasukController@save_surat_masuk');

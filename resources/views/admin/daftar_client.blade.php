@@ -34,9 +34,9 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach ($clients as $client)
+                        @foreach ($clients as $index => $client)
                           <tr>
-                            <td>{{1}}</td>
+                            <td>{{$index+1}}</td>
                             <td>{{$client->nama}}</td>
                             <td>{{$client->instansi}}</td>
                             <td>{{$client->alamat}}</td>

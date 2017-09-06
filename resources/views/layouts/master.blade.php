@@ -37,9 +37,21 @@
      <link href="{{asset('vendor/ion.rangeSlider/css/ion.rangeSlider.css')}}" rel="stylesheet">
      <link href="{{asset('vendor/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css')}}" rel="stylesheet">
 
+         <!-- Dropzone.js -->
+    <link href="{{asset('vendor/dropzone/dist/min/dropzone.min.css')}}" rel="stylesheet">
+
+{{--     <style>
+      .thumb {
+        border: 1px solid #000;
+        margin: 10px 5px 0 0;
+      }
+    </style> --}}
+
+
 {{--    <link href="{{asset('vendor/cropper/dist/cropper.min.css')}}" rel="stylesheet"> --}}
     <!-- Custom Theme Style -->
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
+
   </head>
 
   <body class="nav-md">
@@ -135,7 +147,7 @@
     <!-- NProgress -->
     <script src="{{asset('vendor/nprogress/nprogress.js')}}"></script>
     <!-- bootstrap-progressbar -->
-    <script src="/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="{{asset('vendor/bootstrap-progressbar/bootstrap-progressbar.min.js')}}"></script>
     <!-- Datatables -->
    <script src="{{asset('vendor/datatables.net/js/jquery.dataTables.min.js')}}"></script>
    <script src="{{asset('vendor/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
@@ -197,9 +209,32 @@
     <script src="{{asset('build/js/custom.min.js')}}"></script>
     <script>
       $('#tanggal_awal').datetimepicker({
-          format: 'DD/MM/YYYY'
+          format: 'YYYY-MM-DD'
       });
+
+
+      //untuk preview image sebelum upload
+      function previewImages() {
+          var $preview = $('#preview').empty();
+          if (this.files) $.each(this.files, readAndPreview);
+          function readAndPreview(i, file) {  
+            if (!/\.(jpe?g|png|gif)$/i.test(file.name)){
+              return alert(file.name +" is not an image");
+            } // else... 
+            var reader = new FileReader();
+            $(reader).on("load", function() {
+              $preview.append($("<img/>", {src:this.result, height:200}));
+            });
+            reader.readAsDataURL(file);
+          }
+        }
+        $('#file-input').on("change", previewImages);
+
     </script>
+
+        <!-- Dropzone.js -->
+    <script src="/vendor/dropzone/dist/min/dropzone.min.js"></script>
+
     @yield('scripts')
   </body>
 </html>

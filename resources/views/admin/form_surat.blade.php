@@ -82,7 +82,7 @@
                            <textarea class="resizable_textarea form-control" name="isi_surat" id="isi_surat" placeholder="Masukan Isi surat" style="margin: 0px -28px 0px 0px; height: 66px; width: 498px;"></textarea>
                          </div>
                        </div>
-                          <div
+                          
 {{-- 
                           <div class="form-group">
                             <label for="tanggal_awal" class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal Akhir</label>
