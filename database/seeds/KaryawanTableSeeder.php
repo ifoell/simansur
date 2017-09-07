@@ -11,8 +11,8 @@ class KaryawanTableSeeder extends Seeder
      */
     public function run()
     {
-        //
-        DB::table('karyawans')->insert([
+
+        DB::table('karyawan')->insert([
         	'nama' => 'Noviandri',
         	'nip' => '-',
         	'jabatan' => 'Chief Executive Officer',

@@ -11,19 +11,42 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
 
 Route::get('/gl', ['as' => 'dashboard', 'uses' => 'Admin_GL@index']);
 
 Route::get('/gl/daftar_surat', ['as' => 'daftar_surat', 'uses' => 'Admin_GL@daftar_surat']);
 
-Route::get('/gl/daftar_direksi', ['as' => 'daftar_direksi', 'uses' => 'Admin_GL@daftar_direksi']);
+Route::get('/gl/form_surat', ['as' => 'form_surat', 'uses' => 'Admin_GL@form_surat']);
+
+/*Route::group(['prefix' => 'gl'], function(){
+	Route::resource('daftar_surat', 'SuratController');
+});*/
+
+Route::get('/gl/daftar_karyawan', ['as' => 'daftar_karyawan', 'uses' => 'Admin_GL@daftar_karyawan']);
+
+Route::get('/gl/form_karyawan', ['as' => 'form_karyawan', 'uses' => 'Admin_GL@form_karyawan']);
+
+Route::post('/gl/form_karyawan', 'Admin_GL@save_karyawan');
+
+Route::get('/gl/{karyawan}/edit_karyawan', 'Admin_GL@edit_karyawan')->name('admin.edit_karyawan');
+
+Route::post('/gl/{karyawan}/edit_karyawan', 'Admin_GL@update_karyawan');
+
+Route::post('/gl/{karyawan}/delete_karyawan', 'Admin_GL@delete_karyawan')->name('admin.delete_karyawan');
+
+Route::get('/gl/daftar_surat_masuk', ['as' => 'daftar_surat_masuk', 'uses' => 'Admin_GL@daftar_surat_masuk']);
+
+/*Route::group(['prefix' => 'admin'], function() {
+    Route::resource('karyawan', 'KaryawanController');
+    Route::get('/daftar_surat', ['as' => 'daftar_surat', 'uses' => 'Admin_GL@daftar_surat']);
+});*/
 
 Route::get('/gl/daftar_client', ['as' => 'daftar_client', 'uses' => 'Admin_GL@daftar_client']);
 
@@ -46,8 +69,7 @@ Route::post('/gl/{client}/edit_client', 'Admin_GL@update_client');
 Route::post('/gl/{client}/delete_client', 'Admin_GL@delete_client')->name('admin.delete_client');
 
 // belum dipake
-Route::post('/gl/form_surat', 'Admin_GL@save_surat'); 
-
+Route::post('/gl/form_surat', 'Admin_GL@save_surat');
 
 Route::get('/gl/form_surat_masuk', 'SuratMasukController@form_surat_masuk');
 

@@ -18,6 +18,9 @@ class CreateSuratTable extends Migration
             $table->string('nomor_surat')->unique();
             $table->integer('id_jenis')->unsigned();
             $table->integer('id_client')->unsigned();
+            $table->string('perihal');
+            $table->string('lampiran');
+            $table->date('tanggal');
             $table->timestamps();
 
             $table->foreign('id_jenis')->references('id')->on('jenis');

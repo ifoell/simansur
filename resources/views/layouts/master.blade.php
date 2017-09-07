@@ -18,13 +18,13 @@
     {{-- skin green --}}
     <link href="{{asset('vendor/iCheck/skins/flat/green.css')}}" rel="stylesheet">
     <!-- bootstrap-wysiwyg -->
-    <link href="/vendor/google-code-prettify/bin/prettify.min.css" rel="stylesheet"> 
+    <link href="/vendor/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
     <!-- Select2 -->
-    <link href="/vendor/select2/dist/css/select2.min.css" rel="stylesheet"> 
+    <link href="/vendor/select2/dist/css/select2.min.css" rel="stylesheet">
    <!-- Switchery -->
-    <link href="/vendor/switchery/dist/switchery.min.css" rel="stylesheet"> 
+    <link href="/vendor/switchery/dist/switchery.min.css" rel="stylesheet">
    <!-- starrr -->
-    <link href="/vendor/starrr/dist/starrr.css" rel="stylesheet"> 
+    <link href="/vendor/starrr/dist/starrr.css" rel="stylesheet">
     <!-- Datatables -->
     <link href="{{asset('vendor/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')}}" rel="stylesheet">
@@ -70,7 +70,7 @@
           </div>
           <div class="profile_info">
             <span>Welcome,</span>
-            <h2>Admin</h2>
+            <h2>{{ Auth::user()->name }}</h2>
           </div>
         </div>
         <!-- /menu profile quick info -->
@@ -83,15 +83,22 @@
               <li><a href="{{route('dashboard')}}"><i class="fa fa-home"></i> Dashboard </a></li>
               <li><a href="{{route('daftar_surat')}}"><i class="fa fa-table"></i> Daftar Surat</a></li>
               <li><a href="{{route('daftar_surat_masuk')}}"><i class="fa fa-table"></i> Daftar Surat Masuk </a></li>
-              <li><a href="{{route('daftar_direksi')}}"><i class="fa fa-table"></i> Daftar Karyawan </a></li>
+              <li><a href="{{route('daftar_karyawan')}}"><i class="fa fa-table"></i> Daftar Karyawan </a></li>
               <li><a href="{{route('daftar_client')}}"><i class="fa fa-table"></i> Daftar Client </a></li>
             </ul>
           </div>
           <div class="menu_section">
             <h3>Akun</h3>
             <ul class="nav side-menu">
-              <li><a><i class="fa fa-user"></i> Pengaturan akun </a></li>
-              <li><a><i class="fa fa-user"></i> Logout </a></li>
+              <li><a><i class="fa fa-cog"></i> Pengaturan akun </a></li>
+              <li><a href="{{ url('/logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                <i class="fa fa-sign-out"></i> Logout</a>
+                <form action="{{ url('/logout') }}" method="POST" style="display: none;">
+                  {{ csrf_field() }}
+                </form>
+              </li>
             </ul>
           </div>
         </div>
@@ -108,12 +115,22 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="">
               <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                <img src="images/img.jpg" alt="">Admin
+                <img src="images/img.jpg" alt="">{{ Auth::user()->name }}
                 <span class=" fa fa-angle-down"></span>
               </a>
               <ul class="dropdown-menu dropdown-usermenu pull-right">
                 <li><a href="javascript:;"> Profile</a></li>
-                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                <li>
+                  <a href="{{ url('/logout') }}"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                      Logout
+                  </a>
+
+                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                  </form>
+                </li>
               </ul>
             </li>
             <!--hapus notif pesan-->
@@ -208,33 +225,45 @@
     <!-- Custom Theme Scripts -->
     <script src="{{asset('build/js/custom.min.js')}}"></script>
     <script>
-      $('#tanggal_awal').datetimepicker({
-          format: 'YYYY-MM-DD'
-      });
+    $('#tanggal_awal').datetimepicker({
+        format: 'YYYY-MM-DD'
+    });
 
-
-      //untuk preview image sebelum upload
-      function previewImages() {
-          var $preview = $('#preview').empty();
-          if (this.files) $.each(this.files, readAndPreview);
-          function readAndPreview(i, file) {  
-            if (!/\.(jpe?g|png|gif)$/i.test(file.name)){
-              return alert(file.name +" is not an image");
-            } // else... 
-            var reader = new FileReader();
-            $(reader).on("load", function() {
-              $preview.append($("<img/>", {src:this.result, height:200}));
+    $(document).ready(function() {
+            $('#single_cal3').daterangepicker({
+              singleDatePicker: true,
+              calender_style: "picker_3"
+            }, function(start, end, label) {
+              console.log(start.toISOString(), end.toISOString(), label);
             });
-            reader.readAsDataURL(file);
-          }
+
+            $(".select2_single").select2({
+              placeholder: "Select a client",
+              allowClear: true
+            });
+
+            });
+
+    //untuk preview image sebelum upload
+    function previewImages() {
+        var $preview = $('#preview').empty();
+        if (this.files) $.each(this.files, readAndPreview);
+        function readAndPreview(i, file) {
+          if (!/\.(jpe?g|png|gif)$/i.test(file.name)){
+            return alert(file.name +" is not an image");
+          } // else...
+          var reader = new FileReader();
+          $(reader).on("load", function() {
+            $preview.append($("<img/>", {src:this.result, height:100}));
+          });
+          reader.readAsDataURL(file);
         }
-        $('#file-input').on("change", previewImages);
+      }
+      $('#file-input').on("change", previewImages);
 
     </script>
 
         <!-- Dropzone.js -->
     <script src="/vendor/dropzone/dist/min/dropzone.min.js"></script>
-
-    @yield('scripts')
   </body>
 </html>

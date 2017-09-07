@@ -6,19 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Surat extends Model
 {
-    protected $table = 'surat';
+    protected $fillable = ['nomor_surat', 'id_jenis', 'id_client', 'perihal', 'lampiran', 'tanggal'];
 
-// mengambil data user dari model Client
-    // berdasarkan foreign key 'client_id'
-        public function client() {
-        return $this->belongsTo('App\Client');
+    public function client()
+    {
+    	return $this->belongsTo('App\Client');
     }
 
-            public function karyawan() {
-        return $this->belongsTo('App\Karyawan');
-    }
-
-            public function jenis() {
-        return $this->belongsTo('App\Jenis');
+    public function jenis()
+    {
+    	return $this->belongsTo('App\Jenis');
     }
 }

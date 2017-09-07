@@ -41,6 +41,12 @@
                          </div>
                        </div>
                        <div class="form-group">
+                         <label for="nomor_surat" class="control-label col-md-3 col-sm-3 col-xs-12">No. Surat</label>
+                         <div class="col-md-6 col-sm-6 col-xs-12">
+                           <input id="nomor_surat" class="form-control col-md-7 col-xs-12" type="text" name="nomor_surat" readonly="">
+                         </div>
+                       </div>
+                       <div class="form-group">
                          <label for="perihal" class="control-label col-md-3 col-sm-3 col-xs-12">Perihal</label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
                            <input id="perihal" class="form-control col-md-7 col-xs-12" type="text" name="perihal">
@@ -55,7 +61,13 @@
                        <div class="form-group">
                          <label for="client" class="control-label col-md-3 col-sm-3 col-xs-12">Client</label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input id="client" class="form-control col-md-7 col-xs-12" type="text" name="client">
+                           <select id="client" class="select2_single form-control" tabindex="-1">
+                            <option value="">Select a client...</option>
+                            <option value="4">Thomas Edison</option>
+                            <option value="1">Nikola</option>
+                            <option value="3">Nikola Tesla</option>
+                            <option value="5">Arnold Schwarzenegger</option>
+                          </select>
                          </div>
                        </div>
                        <div class="form-group">
@@ -70,6 +82,7 @@
                               <div class="input-group date" id="tanggal_awal">
                                   <input type="text" class="form-control">
                                   <span class="input-group-addon">
+
                                      <span class="glyphicon glyphicon-calendar"></span>
                                   </span>
                               </div>
@@ -82,8 +95,8 @@
                            <textarea class="resizable_textarea form-control" name="isi_surat" id="isi_surat" placeholder="Masukan Isi surat" style="margin: 0px -28px 0px 0px; height: 66px; width: 498px;"></textarea>
                          </div>
                        </div>
-                          
-{{-- 
+
+{{--
                           <div class="form-group">
                             <label for="tanggal_awal" class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal Akhir</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
