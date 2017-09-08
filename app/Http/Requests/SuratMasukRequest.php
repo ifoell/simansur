@@ -26,7 +26,6 @@ class SuratMasukRequest extends FormRequest
          $rules = [
             'tanggal' => 'required',
             'keterangan' => 'required',
-            'filename' => 'required'
         ];
         $photos = count($this->input('photos'));
         foreach(range(0, $photos) as $index) {
