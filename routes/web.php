@@ -41,7 +41,7 @@ Route::post('/gl/{karyawan}/edit_karyawan', 'Admin_GL@update_karyawan');
 
 Route::post('/gl/{karyawan}/delete_karyawan', 'Admin_GL@delete_karyawan')->name('admin.delete_karyawan');
 
-Route::get('/gl/daftar_surat_masuk', ['as' => 'daftar_surat_masuk', 'uses' => 'Admin_GL@daftar_surat_masuk']);
+Route::get('/gl/daftar_surat_masuk', ['as' => 'daftar_surat_masuk', 'uses' => 'SuratMasukController@daftar_surat_masuk']);
 
 /*Route::group(['prefix' => 'admin'], function() {
     Route::resource('karyawan', 'KaryawanController');
@@ -49,8 +49,6 @@ Route::get('/gl/daftar_surat_masuk', ['as' => 'daftar_surat_masuk', 'uses' => 'A
 });*/
 
 Route::get('/gl/daftar_client', ['as' => 'daftar_client', 'uses' => 'Admin_GL@daftar_client']);
-
-Route::get('/gl/daftar_surat_masuk', ['as' => 'daftar_surat_masuk', 'uses' => 'Admin_GL@daftar_surat_masuk']);
 
 Route::group(['prefix' => 'admin'], function() {
     Route::resource('karyawan', 'KaryawanController');
@@ -68,9 +66,10 @@ Route::post('/gl/{client}/edit_client', 'Admin_GL@update_client');
 
 Route::post('/gl/{client}/delete_client', 'Admin_GL@delete_client')->name('admin.delete_client');
 
-// belum dipake
-Route::post('/gl/form_surat', 'Admin_GL@save_surat');
+Route::post('/gl/{surat_masuk}/delete_surat_masuk', 'SuratMasukController@delete_surat_masuk')->name('admin.delete_surat_masuk');
 
 Route::get('/gl/form_surat_masuk', 'SuratMasukController@form_surat_masuk');
 
 Route::post('/gl/form_surat_masuk', 'SuratMasukController@save_surat_masuk');
+
+Route::get('/gl/show_surat_masuk', 'SuratMasukController@show_surat_masuk');

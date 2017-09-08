@@ -86,12 +86,8 @@ class Admin_GL extends Controller
     }
 
     public function daftar_client(){
-            $clients = Client::All();
+      $clients = Client::All();
       return view('admin.daftar_client', compact('clients'));
-    }
-
-    public function daftar_surat_masuk(){
-      return view('admin.daftar_surat_masuk');
     }
 
     public function form_client(){

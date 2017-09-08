@@ -5,7 +5,7 @@
         <!-- page content -->
             <div class="page-title">
               <div class="title_left">
-                <h3>Daftar Client</h3>
+                <h3>Daftar Surat Masuk</h3>
               </div>
             </div>
 
@@ -25,25 +25,27 @@
                       <thead>
                         <tr>
                           <th>No</th>
-                          <th>image</th>
+                          <th>Tanggal</th>
                           <th>keterangan</th>
+                          <th>Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {{-- @foreach ($clients as $client) --}}
+                         @foreach ($surat_masuks as $index => $surat_masuk)
                           <tr>
-                            <td>1</td>
-                            <td>gambar</td>
-                            <td>keterangan</td>
+                            <td>{{$index+1}}</td>
+                            <td>{{$surat_masuk->tanggal}}</td>
+                            <td>{{$surat_masuk->keterangan}}</td>
                             <td>
-                                <form action="" method="post">
-                                  {{-- {{ csrf_field() }} --}}
-                                  <a href="" class="btn btn-success btn-xs">edit</a>
-                                  <input type="submit" value="hapus" class="btn btn-danger btn-xs" onclick="return confirm('Apakah anda Yakin Data ini Dihapus?')">
+                                <form action="{{route('admin.delete_surat_masuk', $surat_masuk->id)}}" method="post">
+                                  {{ csrf_field() }}
+                                  <a href="/gl/show_surat_masuk" class="btn btn-info btn-xs">Lihat</a>
+                                  <a href="#" class="btn btn-success btn-xs">Edit</a>
+                                  <input type="submit" value="Hapus" class="btn btn-danger btn-xs" onclick="return confirm('Apakah anda Yakin Data ini Dihapus?')">
                                 </form>
                               </td>
                           </tr>
-                       {{--  @endforeach --}}
+                         @endforeach
 
                       </tbody>
                     </table>
