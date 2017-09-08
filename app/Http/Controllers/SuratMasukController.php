@@ -21,17 +21,30 @@ class SuratMasukController extends Controller
     	return view('admin.form_surat_masuk');
     }
 
-    public function save_surat_masuk(SuratMasukRequest $request)
+    public function save_surat_masuk(SuratMasukRequest $SuratMasukrequest)
     {
-    	$surat_masuk = Surat_Masuk::create($request->all());
-        foreach ($request->photos as $photo) {
+    	$surat_masuk = Surat_Masuk::create($SuratMasukrequest->all());
+        foreach ($SuratMasukrequest->photos as $photo) {
             $filename = $photo->store('photos');
+            $destinationPath = 'photos';
+            $photo->move($destinationPath, $filename);
             Gambar_Surat::create([
                 'id_surat_masuk' => $surat_masuk->id,
                 'filename' => $filename
             ]);
           }
-	    $request->session()->flash('message', 'Data Client telah berhasil disimpan');
+
+          // $image = new Gambar_Surat;
+          //
+          //   $file = $request->file('filename');
+          //   $destination_path = 'uploads/';
+          //   $filename = str_random(6).'_'.$file->getClientOriginalName();
+          //   $file->move($destination_path, $filename);
+          //
+          //   $image->file = $destination_path . $filename;
+          //   $image->save();
+
+	    $SuratMasukrequest->session()->flash('message', 'Data Client telah berhasil disimpan');
 	    return redirect()->back();
     }
 
@@ -39,7 +52,7 @@ class SuratMasukController extends Controller
       $request->surat_masuk->delete();
       // $request->gambar_surat->delete();
       $request->session()->flash('message', 'Data Client telah berhasil Dihapus');
-      return redirect()->to('/gl/daftar_client');
+      return redirect()->to('/gl/daftar_surat_masuk');
     }
 
     public function show_surat_masuk(){
