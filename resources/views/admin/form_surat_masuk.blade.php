@@ -27,7 +27,7 @@
                        <div class="form-group">
                          <label for="nama" class="control-label col-md-3 col-sm-3 col-xs-12">file Upload<span class="required">*</span></label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="file" name="photos[]" id="file-input" multiple />
+                            <input type="file" name="photos[]" accept="image/*" id="file-input" multiple />
                             <div id="preview" style="margin:20px"></div>
                          </div>
                        </div>

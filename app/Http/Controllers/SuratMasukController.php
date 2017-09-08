@@ -34,18 +34,8 @@ class SuratMasukController extends Controller
             ]);
           }
 
-          // $image = new Gambar_Surat;
-          //
-          //   $file = $request->file('filename');
-          //   $destination_path = 'uploads/';
-          //   $filename = str_random(6).'_'.$file->getClientOriginalName();
-          //   $file->move($destination_path, $filename);
-          //
-          //   $image->file = $destination_path . $filename;
-          //   $image->save();
-
-	    $SuratMasukrequest->session()->flash('message', 'Data Client telah berhasil disimpan');
-	    return redirect()->back();
+	    $SuratMasukrequest->session()->flash('message', 'Data Surat masuk telah berhasil disimpan');
+      return redirect()->back();
     }
 
     public function delete_surat_masuk(Request $request, Surat_Masuk $surat_masuk, Gambar_Surat $gambar_surat){

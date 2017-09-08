@@ -10,7 +10,6 @@
                    </div>
                    <div class="x_content">
                      <br/>
-                      @include('partials.flash')
                      <form action="/gl/form_karyawan" method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                        {{ csrf_field() }}
                        <div class="form-group">
