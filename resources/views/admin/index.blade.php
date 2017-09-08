@@ -1,8 +1,11 @@
 @extends('layouts.master')
-
+@section('linkcss')
+  {{-- daterangepicker --}}
+  <link href="{{asset('/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
+@endsection
 @section('content')
         <!-- page content -->
-            <div class="row top_tiles">
+            {{-- <div class="row top_tiles"> --}}
               <div class="animated flipInY col-lg-4 col-md-3 col-sm-6 col-xs-14">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-comments-o"></i></div>
@@ -39,5 +42,24 @@
               </div>
             </div>
             <!-- /page content -->
-
       @endsection
+
+@section('linkjs')
+  <!-- Chart.js -->
+  {{-- <script src="/vendors/Chart.js/dist/Chart.min.js"></script> --}}
+  <!-- jQuery Sparklines -->
+  <script src="{{asset('/vendors/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>
+  <!-- Flot -->
+  <script src="{{asset('/vendors/Flot/jquery.flot.js')}}"></script>
+  <script src="{{asset('/vendors/Flot/jquery.flot.pie.js')}}"></script>
+  <script src="{{asset('/vendors/Flot/jquery.flot.time.js')}}"></script>
+  <script src="{{asset('/vendors/Flot/jquery.flot.stack.js')}}"></script>
+  <script src="{{asset('/vendors/Flot/jquery.flot.resize.js')}}"></script>
+  <!-- Flot plugins -->
+  <script src="{{asset('/vendors/flot.orderbars/js/jquery.flot.orderBars.js')}}"></script>
+  <script src="{{asset('/vendors/flot-spline/js/jquery.flot.spline.min.js')}}"></script>
+  <script src="{{asset('/vendors/flot.curvedlines/curvedLines.js')}}"></script>
+  <!-- bootstrap-daterangepicker -->
+  <script src="{{asset('/vendors/moment/min/moment.min.js')}}"></script>
+  <script src="{{asset('/vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
+@endsection

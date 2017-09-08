@@ -11,6 +11,11 @@ use App\Gambar_Surat;
 class SuratMasukController extends Controller
 {
 
+  public function __construct()
+  {
+   $this->middleware('auth');
+  }
+
   public function daftar_surat_masuk(){
     $surat_masuks = Surat_Masuk::All();
     return view('admin.daftar_surat_masuk', compact('surat_masuks'));

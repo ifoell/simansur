@@ -10,9 +10,11 @@
 		<title>{{ config('app.name', 'Laravel') }}</title>
 
 		<!-- Bootstrap -->
-		<link href="{{ asset('vendor/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
 		<!-- Font Awesome -->
-		<link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+		<!-- Animate.css -->
+		<link href="{{asset('/vendors/animate.css/animate.min.css')}}" rel="stylesheet">
 
 		<!-- Custom Theme Style -->
 		<link href="css/custom.css" rel="stylesheet">
