@@ -48,23 +48,23 @@ Route::get('/gl/daftar_surat_masuk', ['as' => 'daftar_surat_masuk', 'uses' => 'S
     Route::get('/daftar_surat', ['as' => 'daftar_surat', 'uses' => 'Admin_GL@daftar_surat']);
 });*/
 
-Route::get('/gl/daftar_client', ['as' => 'daftar_client', 'uses' => 'Admin_GL@daftar_client']);
+Route::get('/gl/daftar_client', 'ClientController@daftar_client')->name('daftar_client');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::resource('karyawan', 'KaryawanController');
 });
 
-Route::get('/gl/form_surat', ['as' => 'form_surat', 'uses' => 'Admin_GL@form_surat']);
+Route::get('/gl/form_surat', 'ClientController@form_surat')->name('form_surat');
 
-Route::get('/gl/form_client', ['as' => 'form_client', 'uses' => 'Admin_GL@form_client']);
+Route::get('/gl/form_client','ClientController@form_client')->name('form_client');
 
-Route::post('/gl/form_client', 'Admin_GL@save_client');
+Route::post('/gl/form_client', 'ClientController@save_client');
 
-Route::get('/gl/{client}/edit_client', 'Admin_GL@edit_client')->name('admin.edit_client');
+Route::get('/gl/{client}/edit_client', 'ClientController@edit_client')->name('admin.edit_client');
 
-Route::post('/gl/{client}/edit_client', 'Admin_GL@update_client');
+Route::post('/gl/{client}/edit_client', 'ClientController@update_client');
 
-Route::post('/gl/{client}/delete_client', 'Admin_GL@delete_client')->name('admin.delete_client');
+Route::post('/gl/{client}/delete_client', 'ClientController@delete_client')->name('admin.delete_client');
 
 Route::post('/gl/{surat_masuk}/delete_surat_masuk', 'SuratMasukController@delete_surat_masuk')->name('admin.delete_surat_masuk');
 

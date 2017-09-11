@@ -30,8 +30,8 @@ class SuratMasukController extends Controller
     {
     	$surat_masuk = Surat_Masuk::create($SuratMasukrequest->all());
         foreach ($SuratMasukrequest->photos as $photo) {
-            $filename = $photo->store('photos');
-            $destinationPath = 'photos';
+            $filename = $photo->store('uploads');
+            $destinationPath = 'uploads';
             $photo->move($destinationPath, $filename);
             Gambar_Surat::create([
                 'id_surat_masuk' => $surat_masuk->id,

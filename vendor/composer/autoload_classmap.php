@@ -6,8 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'AddColumnToSuratMasukTable' => $baseDir . '/database/migrations/2017_09_05_162230_add_column_to_surat_masuk_table.php',
-    'AddIsiSuratFieldToSuratTable' => $baseDir . '/database/migrations/2017_09_04_083648_add_isi_surat_field_to_surat_table.php',
+    'AddSomeColumnToClientTable' => $baseDir . '/database/migrations/2017_09_10_145510_add_some_column_to_client_table.php',
     'Cpdf' => $vendorDir . '/dompdf/dompdf/lib/Cpdf.php',
     'CreateClientTable' => $baseDir . '/database/migrations/2017_08_17_134714_create_client_table.php',
     'CreateGambarSuratTable' => $baseDir . '/database/migrations/2017_09_06_130212_create_gambar_surat_table.php',
@@ -18,7 +17,6 @@ return array(
     'CreateSuratTable' => $baseDir . '/database/migrations/2017_08_27_035557_create_surat_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
-    'DeleteColumnSuratMasukTable' => $baseDir . '/database/migrations/2017_09_06_133820_delete_column_surat_masuk_table.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
@@ -135,7 +133,6 @@ return array(
     'Maatwebsite\\Excel\\Readers\\LaravelExcelReader' => $vendorDir . '/maatwebsite/excel/src/Maatwebsite/Excel/Readers/LaravelExcelReader.php',
     'Maatwebsite\\Excel\\Writers\\CellWriter' => $vendorDir . '/maatwebsite/excel/src/Maatwebsite/Excel/Writers/CellWriter.php',
     'Maatwebsite\\Excel\\Writers\\LaravelExcelWriter' => $vendorDir . '/maatwebsite/excel/src/Maatwebsite/Excel/Writers/LaravelExcelWriter.php',
-    'ModifySuratMasukTable' => $baseDir . '/database/migrations/2017_09_06_132434_modify_surat_masuk_table.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\AssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
     'PHPUnit\\Framework\\BaseTestListener' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',

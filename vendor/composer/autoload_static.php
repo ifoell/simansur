@@ -463,8 +463,7 @@ class ComposerStaticInit4221194e77125ca637f6b6c47cd51a46
     );
 
     public static $classMap = array (
-        'AddColumnToSuratMasukTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_05_162230_add_column_to_surat_masuk_table.php',
-        'AddIsiSuratFieldToSuratTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_04_083648_add_isi_surat_field_to_surat_table.php',
+        'AddSomeColumnToClientTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_10_145510_add_some_column_to_client_table.php',
         'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'CreateClientTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_17_134714_create_client_table.php',
         'CreateGambarSuratTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_06_130212_create_gambar_surat_table.php',
@@ -475,7 +474,6 @@ class ComposerStaticInit4221194e77125ca637f6b6c47cd51a46
         'CreateSuratTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_27_035557_create_surat_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
-        'DeleteColumnSuratMasukTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_06_133820_delete_column_surat_masuk_table.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
@@ -592,7 +590,6 @@ class ComposerStaticInit4221194e77125ca637f6b6c47cd51a46
         'Maatwebsite\\Excel\\Readers\\LaravelExcelReader' => __DIR__ . '/..' . '/maatwebsite/excel/src/Maatwebsite/Excel/Readers/LaravelExcelReader.php',
         'Maatwebsite\\Excel\\Writers\\CellWriter' => __DIR__ . '/..' . '/maatwebsite/excel/src/Maatwebsite/Excel/Writers/CellWriter.php',
         'Maatwebsite\\Excel\\Writers\\LaravelExcelWriter' => __DIR__ . '/..' . '/maatwebsite/excel/src/Maatwebsite/Excel/Writers/LaravelExcelWriter.php',
-        'ModifySuratMasukTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_06_132434_modify_surat_masuk_table.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',

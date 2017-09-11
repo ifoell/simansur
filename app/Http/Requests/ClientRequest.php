@@ -25,8 +25,14 @@ class ClientRequest extends FormRequest
     {
         return [
           'nama'=> 'required',
-          'instansi'=> 'required',
+          'tangggal_lahir'=> 'required',
+          'jenis_kelamin'=> 'required',
+          'no_identitas'=> 'required',
           'alamat'=> 'required',
+          'no_telp'=> 'required',
+          'email'=> 'required',
+          'instansi'=> 'required',
+          'jabatan'=> 'required',
         ];
     }
 }
