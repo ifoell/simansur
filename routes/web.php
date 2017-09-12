@@ -73,3 +73,7 @@ Route::get('/gl/form_surat_masuk', 'SuratMasukController@form_surat_masuk');
 Route::post('/gl/form_surat_masuk', 'SuratMasukController@save_surat_masuk');
 
 Route::get('/gl/show_surat_masuk', 'SuratMasukController@show_surat_masuk');
+
+Route::get('/gl/daftar_client/show_client/{client}','Admin_GL@show_client');
+
+Route::get('/gl/daftar_client/edit_client/{client}','Admin_GL@edit_client');

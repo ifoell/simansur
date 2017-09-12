@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Client;
 use App\Surat;
 use App\Jenis;
+use Response;
 use App\Http\Requests\ClientRequest;
 
 use App\Karyawan;
@@ -87,7 +88,7 @@ class Admin_GL extends Controller
 
     public function daftar_client(){
       $clients = Client::All();
-      return view('admin.daftar_client', compact('clients'));
+      return view('admin.daftar_client', compact('clients'))->with('client',$clients);
     }
 
     public function form_client(){
@@ -113,6 +114,11 @@ class Admin_GL extends Controller
 
     public function edit_client(Client $client){
       return view('admin.edit_client', compact('client'));
+    }
+
+    public function show_client($client_id){
+          $client = Client::find($client_id);
+          return Response::json($client);
     }
 
     public function update_client(ClientRequest $request, Client $client){

@@ -54,6 +54,7 @@
                             <td>
                                 <form action="{{route('admin.delete_client', $client->id)}}" method="post">
                                   {{ csrf_field() }}
+                                  <button type="button" class="btn btn-info btn-xs btn-detail open-modal" value="{{$client->id}}">show</button>
                                   <a href="{{route('admin.edit_client', $client->id)}}" class="btn btn-success btn-xs">edit</a>
                                   <input type="submit" value="hapus" class="btn btn-danger btn-xs" onclick="return confirm('Apakah anda Yakin Data ini Dihapus?')">
                                 </form>
@@ -63,7 +64,7 @@
 
                       </tbody>
                     </table>
-
+@include('partials.show_client')
                   </div>
                 </div>
               </div>
@@ -90,5 +91,7 @@
   <script src="{{asset('/vendors/jszip/dist/jszip.min.js')}}"></script>
   <script src="{{asset('/vendors/pdfmake/build/pdfmake.min.js')}}"></script>
   <script src="{{asset('/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
+
+   <script src="{{asset('js/ajax-crud.js')}}"></script>
 
 @endsection
