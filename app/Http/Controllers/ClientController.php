@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Client;
 use App\Http\Requests\ClientRequest;
+
+use Laratrust\LaratrustFacade as Laratrust;
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
@@ -26,10 +30,16 @@ class ClientController extends Controller
     public function save_client(ClientRequest $request){
       Client::create([
       'nama' => $request->nama,
-      'instansi' => $request->instansi,
+      'tanggal_lahir' => $request->tanggal_lahir,
+      'jenis_kelamin' => $request->jenis_kelamin,
+      'agama' => $request->agama,
+      'no_identitas' => $request->no_identitas,
       'alamat' => $request->alamat,
       'no_telp' => $request->no_telp,
       'email' => $request->email,
+      'instansi' => $request->instansi,
+      'jabatan' => $request->jabatan,
+      'alamat_instansi' => $request->alamat_instansi,
       ]);
       $request->session()->flash('message', 'Data Client telah berhasil disimpan');
       return redirect()->back();
@@ -42,10 +52,16 @@ class ClientController extends Controller
     public function update_client(ClientRequest $request, Client $client){
       $request->client->update([
         'nama' => $request->nama,
-        'instansi' => $request->instansi,
+        'tanggal_lahir' => $request->tanggal_lahir,
+        'jenis_kelamin' => $request->jenis_kelamin,
+        'agama' => $request->agama,
+        'no_identitas' => $request->no_identitas,
         'alamat' => $request->alamat,
         'no_telp' => $request->no_telp,
         'email' => $request->email,
+        'instansi' => $request->instansi,
+        'jabatan' => $request->jabatan,
+        'alamat_instansi' => $request->alamat_instansi,
       ]);
       $request->session()->flash('message', 'Data Client telah berhasil Diperbaharui');
       return redirect()->route('daftar_client');

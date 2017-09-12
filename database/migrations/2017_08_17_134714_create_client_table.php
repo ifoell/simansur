@@ -16,10 +16,16 @@ class CreateClientTable extends Migration
         Schema::create('client', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
-            $table->string('instansi');
+            $table->date('tangggal_lahir');
+            $table->string('jenis_kelamin')->nullable();
+            $table->string('agama')->nullable();
+            $table->string('no_identitas');
             $table->string('alamat');
-            $table->string('no_telp');
+            $table->string('no_telp')->nullable();
             $table->string('email');
+            $table->string('instansi');
+            $table->string('jabatan')->nullable();
+            $table->string('alamat_instansi')->nullable();
             $table->timestamps();
         });
     }

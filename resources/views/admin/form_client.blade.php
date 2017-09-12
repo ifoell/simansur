@@ -41,17 +41,40 @@
                          </div>
                        </div>
                        <div class="form-group">
-                         <label for="instansi" class="control-label col-md-3 col-sm-3 col-xs-12">Instansi <span class="required">*</span></label>
+                         <label for="tanggal_lahir" class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal lahir</label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input id="instansi" class="form-control col-md-7 col-xs-12" type="text" name="instansi" required="required">
+                           <div class="input-group date" id="tanggal_awal">
+                               <input type="text" class="form-control" name="tanggal_lahir">
+                               <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar"></span>
+                               </span>
+                           </div>
                          </div>
                        </div>
                        <div class="form-group">
-                         <label for="alamat" class="control-label col-md-3 col-sm-3 col-xs-12">Alamat <span class="required">*</span></label>
+                         <label for="jenis_kelamin" class="control-label col-md-3 col-sm-3 col-xs-12">jenis_kelamin<span class="required">*</span></label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input id="alamat" class="form-control col-md-7 col-xs-12" type="text" name="alamat" required="required">
+                           <input id="jenis_kelamin" class="form-control col-md-7 col-xs-12" required="required" type="text" name="jenis_kelamin">
                          </div>
                        </div>
+                       <div class="form-group">
+                         <label for="agama" class="control-label col-md-3 col-sm-3 col-xs-12">agama<span class="required">*</span></label>
+                         <div class="col-md-6 col-sm-6 col-xs-12">
+                           <input id="agama" class="form-control col-md-7 col-xs-12" required="required" type="text" name="agama">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                         <label for="no_identitas" class="control-label col-md-3 col-sm-3 col-xs-12">No Identitas <span class="required">*</span></label>
+                         <div class="col-md-6 col-sm-6 col-xs-12">
+                           <input id="no_identitas" class="form-control col-md-7 col-xs-12" placeholder="Masukan no KTP / SIM / NIP / yang lainnya" type="text" name="no_identitas" required="required">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                        <label for="alamat" class="control-label col-md-3 col-sm-3 col-xs-12">Alamat</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea class="resizable_textarea form-control" name="alamat" id="alamat" placeholder="Masukan alamat" style="margin: 0px -28px 0px 0px; height: 66px; width: 570px;"></textarea>
+                        </div>
+                      </div>
                        <div class="form-group">
                          <label for="no_telp" class="control-label col-md-3 col-sm-3 col-xs-12">Nomor Telepon</label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
@@ -64,6 +87,24 @@
                            <input id="email" class="form-control col-md-7 col-xs-12" type="email" name="email">
                          </div>
                        </div>
+                       <div class="form-group">
+                         <label for="instansi" class="control-label col-md-3 col-sm-3 col-xs-12">Instansi <span class="required">*</span></label>
+                         <div class="col-md-6 col-sm-6 col-xs-12">
+                           <input id="instansi" class="form-control col-md-7 col-xs-12" type="text" name="instansi" required="required">
+                         </div>
+                       </div>
+                     <div class="form-group">
+                       <label for="jabatan" class="control-label col-md-3 col-sm-3 col-xs-12">jabatan</label>
+                       <div class="col-md-6 col-sm-6 col-xs-12">
+                         <input id="jabatan" class="form-control col-md-7 col-xs-12" type="text" name="jabatan">
+                       </div>
+                     </div>
+                     <div class="form-group">
+                      <label for="alamat_instansi" class="control-label col-md-3 col-sm-3 col-xs-12">Alamat Instansi</label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <textarea class="resizable_textarea form-control" name="alamat_instansi" id="alamat_instansi" placeholder="Masukan alamat instansi" style="margin: 0px -28px 0px 0px; height: 66px; width:  570px;"></textarea>
+                      </div>
+                    </div>
 
                        <div class="ln_solid"></div>
                        <div class="form-group">

@@ -35,10 +35,9 @@
                         <tr>
                           <th>No</th>
                           <th>Nama</th>
-                          <th>Instansi</th>
+                          <th>No Identitas</th>
                           <th>Alamat</th>
-                          <th>No. Telp</th>
-                          <th>Email</th>
+                          <th>Asal Instansi</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
@@ -47,10 +46,9 @@
                           <tr>
                             <td>{{$index+1}}</td>
                             <td>{{$client->nama}}</td>
-                            <td>{{$client->instansi}}</td>
+                            <td>{{$client->no_identitas}}</td>
                             <td>{{$client->alamat}}</td>
-                            <td>{{$client->no_telp}}</td>
-                            <td>{{$client->email}}</td>
+                            <td>{{$client->instansi}}</td>
                             <td>
                                 <form action="{{route('admin.delete_client', $client->id)}}" method="post">
                                   {{ csrf_field() }}

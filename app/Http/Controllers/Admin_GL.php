@@ -30,10 +30,6 @@ class Admin_GL extends Controller
       return view('admin.daftar_surat');
     }
 
-    public function form_surat(){
-      return view('admin.form_surat');
-    }
-
     public function save_surat(SuratRequest $request){
       Surat::create([
         'nomor_surat' => $request->nomor_surat,

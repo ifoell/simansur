@@ -54,7 +54,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::resource('karyawan', 'KaryawanController');
 });
 
-Route::get('/gl/form_surat', 'ClientController@form_surat')->name('form_surat');
+Route::get('/gl/form_surat', 'SuratController@create')->name('form_surat');
 
 Route::get('/gl/form_client','ClientController@form_client')->name('form_client');
 
