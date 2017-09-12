@@ -27,6 +27,9 @@ class ClientRequest extends FormRequest
           'nama'=> 'required',
           'instansi'=> 'required',
           'alamat'=> 'required',
+          'email'=> 'required',
+          'no_telp'=> 'required',
+          'no_identitas'=> 'required',
         ];
     }
 }

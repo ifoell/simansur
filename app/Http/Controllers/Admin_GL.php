@@ -97,10 +97,15 @@ class Admin_GL extends Controller
     public function save_client(ClientRequest $request){
       Client::create([
       'nama' => $request->nama,
-      'instansi' => $request->instansi,
+      'tanggal_lahir' => $request->tanggal_lahir,
+      'jenis_kelamin' => $request->jenis_kelamin,
+      'agama' => $request->agama,
+      'no_identitas' => $request->no_identitas,
       'alamat' => $request->alamat,
       'no_telp' => $request->no_telp,
       'email' => $request->email,
+      'instansi' => $request->instansi,
+      'alamat_instansi' => $request->alamat_instansi,
     ]);
     $request->session()->flash('message', 'Data Client telah berhasil disimpan');
     return redirect()->back();
